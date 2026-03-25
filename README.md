@@ -6,7 +6,7 @@ Project built as a solution to the "Fylo data storage component" challenge on Fr
 
 ## 📸 Screenshot
 
-
+<img src="./design/desktop-design.PNG" alt="Design"/>
 
 ---
 
