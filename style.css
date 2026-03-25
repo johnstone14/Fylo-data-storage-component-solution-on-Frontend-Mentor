@@ -1,0 +1,236 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Raleway';
+}
+
+:root {
+    --Gradient: hsl(6, 100%, 80%) to hsl(335, 100%, 65%);
+
+    --Blue-200: hsl(243, 100%, 93%);
+    --Grayish-Blue: hsl(229, 7%, 55%);
+    --Blue-850: hsl(228, 56%, 26%);
+    --Blue-950: hsl(229, 57%, 11%);
+}
+
+main {
+    display: flex;
+    align-items: flex-end;
+    gap: 30px;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow-x: hidden;
+    height: 100vh;
+
+    background-color: var(--Blue-950);
+    background-image: url(./assets/bg-desktop.png);
+    background-repeat: no-repeat;
+    background-position: 0px 310px;
+    background-size: cover;
+
+    font-size: 14px;
+}
+
+.fylo {
+    display: flex;
+    flex-direction: column;
+
+    padding: 40px;
+    padding-right: 120px;
+    border-radius: 12px;
+    border-top-right-radius: 120px;
+
+    background-color: var(--Blue-850);
+
+    [alt="logo"] {
+        margin-bottom: 24px;
+    }
+}
+
+.icons {
+    display: flex;
+}
+
+.icons img {
+    background-color: var(--Blue-950);
+    border-radius: 12px;
+    padding: 12px;
+
+    object-fit: contain;
+    margin-right: 16px;
+
+    height: 48px;
+    width: 48px;
+}
+
+.icons img:hover {
+    background-color: var(--Blue-200);
+    cursor: pointer;
+
+}
+
+
+/* GB USAGE SECTION */
+
+.GB {
+    background-color: var(--Blue-850);
+    padding: 40px;
+    border-radius: 12px;
+
+    height: 155px;
+    width: 540px;
+
+    color: white;
+}
+
+.ballon {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    justify-content: center;
+
+    width: 181px;
+    height: 72px;
+
+    background-color: white;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+    border-bottom-left-radius: 12px;
+    
+    padding: 12px;
+
+    bottom: 5rem;
+    left: 17.3rem;
+
+    & h1 {
+        color: var(--Blue-950);
+        font-weight: 700;
+        font-size: 2.3rem;
+    }
+
+    & p {
+        color: var(--Grayish-Blue);
+        font-weight: 700;
+        letter-spacing: 1px;
+        font-size: 12px;
+    }
+}
+
+
+
+.content {
+    position: relative;
+}
+
+.your-GB {
+    letter-spacing: 0.2px;
+    color: hsl(244, 52%, 88%);;
+
+    & span {
+        font-weight: 700;
+        color: var(--Blue-200);
+    }
+}
+
+.ballon::after {
+    content: "";
+    position: absolute;
+
+    bottom: -40px;
+    right: 0px;
+
+    border-width: 22px 0 22px 22px;
+    border-style: solid;
+    border-color: white transparent transparent transparent;
+}
+
+.progress-bar {
+    display: flex;
+    align-items: center;
+
+    background-color: var(--Blue-950);
+    height: 14px;
+    width: 100%;
+    border-radius: 12px;
+    margin-top: 16px;
+}
+
+.progress {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+
+    margin-left: 2px;
+    background: linear-gradient(90deg, hsl(6, 100%, 80%), hsl(335, 100%, 65%));
+    height: 10px;
+    width: 70%;
+    border-radius: 12px;
+
+    & .ball {
+        height: 8px;
+        width: 8px;
+        background-color: white;
+        border-radius: 50%;
+        margin: 2px;
+    }
+}
+
+.numbers {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 8px;
+
+    & p {
+        font-weight: 600;
+    }
+}
+
+
+@media (max-width: 768px) {
+
+    body {
+        all: unset;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+
+        overflow-x: hidden;
+        overflow-y: hidden;
+        height: 100vh;
+
+        background-image: url(./assets/bg-mobile.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    main {
+        flex-direction: column;
+    }
+
+    .ballon {
+        border-bottom-right-radius: 12px;
+        bottom: -5.5rem;
+    }
+
+    .ballon::after {
+        all: unset;
+    }
+
+    .GB {
+        width: 100%;
+    }
+
+    .ballon {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}
